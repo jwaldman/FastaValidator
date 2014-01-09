@@ -1,0 +1,80 @@
+// Copyright (C) 2014 Jost Waldmann
+//
+// This file is part of the FastaValidator Java Library. This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU Lesser General Public License in version 3 (LGPL3) as 
+// published by the Free Software Foundation.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// Lesser General Public License for more details.
+
+// You should have received a copy of the Lesser General Public License along
+// with this library; see the file COPYING.  If not, write to the Free
+// Software Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307,
+// USA.
+
+// If you have any questions, send an email to megx@mpi-bremen.de.
+
+
+------------------
+FastaValidator 1.0
+------------------
+
+Contact:
+
+    Dipl.-Inf. Jost Waldmann
+
+    Max Planck Institute for Marine Microbiology
+    Dept. of Molecular Ecology
+    Microbial Genomics and Bioinformatics Research Group
+    Celsiusstrasse 1
+    28359 Bremen
+    Germany 
+
+    e-mail: megx@mpi-bremen.de
+    web:    http://www.microbial-genomics.de
+
+------------------
+
+[PURPOSE]
+FastaValidator is an open-source Java library to parse and validate FASTA formatted sequences in their applications.
+
+For a ready-to-use application, which does not require any programing skills, have a look at the FastaValidatorUI seciton below.
+
+
+[BUILDING REQUIREMENTS]
+Java >=1.5
+JFlex >=1.4.3
+Ant >=1.8.1
+
+
+[BUILD]
+Type "ant" to build FastaValidator.
+
+After you successfully built the software a jar-package 
+FastaValidator-x.y.jar (version might change) can be found in the dist directory.
+There are no further dependencies to other libraries excepting 
+to the package itself (see demo).
+
+
+[DEMO]
+An example how to use the library, a short program can be found in build/demo/FVTester.java.
+Type "java -classpath 'dist/FastaValidator-1.0.jar:build/demo' FVTester misc/testfiles/test01.fas" to test the parser.
+If the input is valid it will be printed to STDOUT - otherwise an error message is shown.
+There are also other test files available at 'misc/testfiles/' (some are in invalid FASTA format).
+
+Have also a look at the sources of the FastaValidatorUi application in misc/FastaValidatorUi.
+
+
+[FastaValidatorUi]
+The FastaValidatorUI is an application for scientists, who simply want to validate their FASTA files.
+It does not require any programming skills.
+
+To build the FastaValidatorUi please type "ant fvui". This executes the file 
+'build.xml' in the base directory of the FastaValidatorUi application 
+(misc/FastaValidatorUi/) using ant.
+
+For detailed documentation please refer to its README located at misc/FastaValidatorUi/README.
+
