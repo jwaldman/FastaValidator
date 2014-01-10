@@ -82,13 +82,13 @@ public class FastaValidatorUi {
             System.err.println(exp.getMessage());
             HelpFormatter formatter = new HelpFormatter();
             formatter.printHelp("FastaValidatorUi", options, true);
-            System.exit(1);
+            System.exit(1); //indicate error to external environment
         }
 
         if (cmdline.hasOption("h")) {
             HelpFormatter formatter = new HelpFormatter();
             formatter.printHelp("FastaValidatorUi", options, true);
-            System.exit(0);
+            System.exit(0); //indicate no errors to external environment
         }
 
 
@@ -113,9 +113,9 @@ public class FastaValidatorUi {
                 cmdlinegui.setSequencetype(FastaValidator.Sequencetype.ALL);
             }
 
-            //trigger validation
-            int status=cmdlinegui.validate();
-            System.exit(status);
+            //trigger validation and exit with exitcode
+            int exitcode=cmdlinegui.validate().getValue();
+            System.exit(exitcode);
 
         } else { //gui-mode
             //start gui in its own thread

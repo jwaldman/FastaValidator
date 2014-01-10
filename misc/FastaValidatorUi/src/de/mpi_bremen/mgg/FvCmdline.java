@@ -107,7 +107,7 @@ public class FvCmdline implements FastaValidatorCallback {
      *
      * @return exit code
      */
-    public int validate() {
+    public EXITCODE validate() {
         //create a FastaValidator instance
         FastaValidator FV = new FastaValidator(this);
 
@@ -127,37 +127,37 @@ public class FvCmdline implements FastaValidatorCallback {
             if (mVerbose) {
                 System.err.println("ERROR: " + e.getMessage());
             }
-            return EXITCODE.IO_ERROR.getValue();
+            return EXITCODE.IO_ERROR;
         } catch (InvalidCharacterException e) //invalid character(s) found in fasta file
         {
             if (mVerbose) {
                 System.out.println("WARNING: " + e.getMessage());
             }
-            return EXITCODE.INVALID_CHAR.getValue();
+            return EXITCODE.INVALID_CHAR;
         } catch (FastaFormatException e) //file not in fasta format
         {
             if (mVerbose) {
                 System.out.println("WARNING: " + e.getMessage());
             }
-            return EXITCODE.INVALID_FORMAT.getValue();
+            return EXITCODE.INVALID_FORMAT;
         } catch (FastaHandlingException e)//error from callback methods; thrown by user
         {
             if (mVerbose) {
                 System.out.println("WARNING: " + e.getMessage());
             }
-            return EXITCODE.HANDLING_ERROR.getValue();
+            return EXITCODE.HANDLING_ERROR;
         } catch (FastaValidatorException e)//error from callback methods; thrown by user
         {
             if (mVerbose) {
                 System.out.println("WARNING: " + e.getMessage());
             }
-            return EXITCODE.USER_ERROR.getValue();
+            return EXITCODE.USER_ERROR;
         } catch (Exception e) //all other errors
         {
             System.err.println("ERROR: An unknown error occured.");
-            return EXITCODE.UNKNOWN_ERROR.getValue();
+            return EXITCODE.UNKNOWN_ERROR;
         }
-        return EXITCODE.VALID.getValue();
+        return EXITCODE.VALID;
     }
 
     /**
