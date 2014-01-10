@@ -160,8 +160,10 @@ public class FvGui extends JFrame implements FastaValidatorCallback {
                             return;
                         }
                     }
-                } catch (Throwable t) {
-                    t.printStackTrace();
+                } catch (Exception ex) {
+                	getContentPane().setBackground(Color.YELLOW);
+                	mResultInfo.setText("ERROR: " + ex.getMessage());
+                    ex.printStackTrace();
                 }
                 //a problem occured
                 e.rejectDrop();
