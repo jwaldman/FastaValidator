@@ -49,6 +49,9 @@ Java >=1.5
 JFlex >=1.4.3
 Ant >=1.8.1
 
+Note:
+All requirements must be added to the PATH environment variable.
+
 
 [BUILD]
 Type "ant" to build FastaValidator.
