@@ -76,5 +76,8 @@ To build the FastaValidatorUi please type "ant fvui". This executes the file
 'build.xml' in the base directory of the FastaValidatorUi application 
 (misc/FastaValidatorUi/) using ant.
 
+To execute the FastaValidatorUi from top-level simply type 'java -jar misc/FastaValidatorUi/dist/FastaValidatorUi-1.0.jar'.
+This launches the grpahical user interface of FastaValidatorUi.
+
 For detailed documentation please refer to its README located at misc/FastaValidatorUi/README.
 
