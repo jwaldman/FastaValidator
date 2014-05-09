@@ -102,8 +102,8 @@ public class FastaValidatorUi {
             cmdlinegui.setVerbose(cmdline.hasOption("v"));
 
             //handle input file
-            if (cmdline.hasOption("i")) {
-                cmdlinegui.setInput(cmdline.getOptionValue("i"));
+            if (cmdline.hasOption("f")) {
+                cmdlinegui.setInput(cmdline.getOptionValue("f"));
             }
 
             //set sequencetype
