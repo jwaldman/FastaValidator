@@ -71,7 +71,7 @@
 
     -->
     
-    <property name="version.num" value="1.0"/>
+    <property name="version.num" value="1.0.1"/>
     <tstamp>
 	<format property="NOW" pattern="yyyy-MM-dd-HH:mm:ss"/>
     </tstamp>
